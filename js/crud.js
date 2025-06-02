@@ -28,7 +28,7 @@ function addProduct() {
   };
   productList.push(product);
   //   console.log(productList);
-  //   clearForm();
+    clearForm();
   localStorage.setItem("products", JSON.stringify(productList));
   displayProduct(productList);
 }
