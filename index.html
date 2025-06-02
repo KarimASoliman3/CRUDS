@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- bootstrab css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="bg-dark ">
+    <div class="crud p-4 text-light">
+      <h1 class="text-center text-capitalize">store management system</h1>
+      <div class="w-50 mx-auto mt-4">
+        <div class="form-floating mb-4">
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            placeholder="Name"
+          />
+          <label for="productName">Product Name : </label>
+        </div>
+        <div class="form-floating mb-4">
+          <input
+            type="number"
+            class="form-control"
+            id="productPrice"
+            placeholder="price"
+          />
+          <label for="productPrice">Product Price : </label>
+        </div>
+        <div class="form-floating mb-4">
+          <input
+            type="text"
+            class="form-control"
+            id="productCategory"
+            placeholder="category"
+          />
+          <label for="productCategory">Product Category : </label>
+        </div>
+        <div class="form-floating mb-4">
+          <input
+            type="text"
+            class="form-control"
+            id="productDesc"
+            placeholder="Password"
+          />
+          <label for="productDesc">Product Description : </label>
+        </div>
+        <div class="form-floating mb-4">
+          <input
+            type="file"
+            class="form-control"
+            id="productImage"
+            placeholder="img"
+          />
+          <label for="productImage">Product Image : </label>
+        </div>
+        <div class="w-50 mx-auto">
+          <button id="addBtn" onclick="addProduct()" class="btn btn-primary w-100 fw-bold">
+            Add Product
+          </button>
+          <button id="updateBtn" onclick="updateProduct()" class="btn btn-danger w-100 d-none fw-bold">
+            Update Product
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== -->
+     <div class="position-relative w-50 mx-auto">
+        <input
+              oninput="searchProduct()"
+              type="text"
+              class="form-control pe-5"
+              id="searchInput"
+              placeholder="search by name ......."
+        />
+        <span><i class="fa-solid fa-magnifying-glass position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i></span>
+     </div>
+    <!-- ===================== -->
+    <section>
+      <div class="container py-4">
+        <div id="rowData" class="row gy-4">
+
+        </div>
+      </div>
+    </section>
+    <!-- ===================== -->
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/crud.js"></script>
+  </body>
+</html>
